@@ -26,6 +26,7 @@ blog:
     {{/each}}
 
 <div class="main full">
+    <p class="cardId">{{cart_id}}</p>
     {{#if products.featured}}
         {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
     {{/if}}
@@ -40,6 +41,40 @@ blog:
         {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
     {{/if}}
     {{{region name="home_below_new_products"}}}
+
+    {{!-- Test --}}
+
+    {{#if customer }}
+        <h2>Welcome back, {{customer.name}}</h2>
+    {{else}}
+        <h2>Welcome, Guest</h2>
+    {{/if}}
+
+    <ul class="category-list">
+        {{#each categories}}
+            <li class="category-list-item">
+                <a href="{{url}}">{{name}}</a>
+            </li>
+        {{/each}}
+    </ul>
+
+    <ul class="products-list">
+        {{#each products.new}}
+            {{> components/custom/product/featured-product product=this}}
+        {{/each}}
+
+    </ul>
+
+    <div>
+        {{> components/custom/common/button text="Add to cart"}}
+        {{> components/custom/common/button text="Buy now" style="primary" size="small"}}
+        {{> components/custom/common/button text="Compare" style="secondary" size="large"}}
+    </div>
+    <div class="custom-search">
+        <label for="custom-product-search">Search</label>
+        <input type="text" placeholder="Search" id="custom-product-search" class="custom-product-search" value="sample">
+        <div id="product-list"></div>
+    </div>
 </div>
 {{/partial}}
 {{> layout/base}}

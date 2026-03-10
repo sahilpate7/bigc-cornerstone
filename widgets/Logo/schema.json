@@ -1,0 +1,50 @@
+[
+  {
+    "type": "array",
+    "label": "Logos",
+    "id": "logos",
+    "defaultCount": 5,
+    "entryLabel": "Logo",
+    "thumbnail": {
+      "type": "image",
+      "valueKey": "logo.src"
+    },
+    "schema": [
+      {
+        "type": "tab",
+        "label": "Content",
+        "sections": [
+          {
+            "settings": [
+              {
+                "label" : "Logo",
+                "type": "imageManager",
+                "id": "logo",
+                "default": {
+                  "src": "",
+                  "type": "imageManager"
+                }
+              },
+              {
+                "label": "Alt text",
+                "type": "input",
+                "id": "altText",
+                "default": ""
+              },
+              {
+                "label": "HTML Code",
+                "type": "code",
+                "id": "html",
+                "default": "<p>HTML Goes here</p>",
+                "typeMeta": {
+                  "language": "html",
+                  "placeholder": "HTML Goes here"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

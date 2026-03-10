@@ -1,0 +1,59 @@
+[
+  {
+    "type": "tab",
+    "label": "Content",
+    "sections": [
+      {
+        "settings": [
+          {
+            "label": "Title",
+            "type": "input",
+            "id": "title",
+            "default": "Featured Products"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "tab",
+    "label": "Content",
+    "sections": [
+      {
+        "label": "Products",
+        "settings": [
+          {
+            "type": "productSet",
+            "label": "Product Set",
+            "id": "product",
+            "entryLabel": "Product",
+            "default": {
+              "type": "manual",
+              "value": []
+            }
+          }
+        ],
+        "typeMeta": {
+          "type": "setSection"
+        }
+      }
+    ]
+  },
+  {
+    "type": "hidden",
+    "settings": [
+      {
+        "type": "graphQl",
+        "id": "graphQueries",
+        "typeMeta": {
+          "mappings": {
+            "productsList": {
+              "reads": "product.value.*.productId",
+              "type": "Int!"
+            }
+          }
+        }
+      }
+    ]
+  }
+]

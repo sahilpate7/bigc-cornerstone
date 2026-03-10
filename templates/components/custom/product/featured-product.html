@@ -1,0 +1,21 @@
+<div class="featured-product">
+  <div class="featured-product-image">
+<!--    <img src="{{getImage product.image 1x=(default fallback_size '160w')}}" alt="{{product.name}}" title="{{product.name}}" />-->
+    {{> components/common/responsive-img
+      image=product.image
+      class=""
+      fallback_size=theme_settings.productgallery_size
+      lazyload=theme_settings.lazyload_mode
+      default_image=theme_settings.default_image_product
+    }}
+  </div>
+  <div class="products-details">
+    <h3 class="name">{{product.name}}</h3>
+    <div class="price">
+      Price: {{money product.price.without_tax.value}}
+    </div>
+    <button data-product-id="{{product.id}}" class="button button--primary">
+      Add to Cart
+    </button>
+  </div>
+</div>

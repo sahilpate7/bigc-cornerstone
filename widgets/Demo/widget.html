@@ -1,0 +1,45 @@
+
+<style>
+        #bc-simple-text-{{_.id}} {
+            color: {{color}};
+            background: {{background_color}};
+            font-size: {{font_size.value}}{{font_size.type}};
+            font-weight: {{font_weight}};
+            text-align: {{text_align.horizontal}};
+            padding-top: {{padding.top.value}}{{padding.top.type}};
+            padding-right: {{padding.right.value}}{{padding.right.type}};
+            padding-bottom: {{padding.bottom.value}}{{padding.bottom.type}};
+            padding-left: {{padding.left.value}}{{padding.left.type}};
+            margin-top: {{margin.top.value}}{{margin.top.type}};
+            margin-right: {{margin.right.value}}{{margin.right.type}};
+            margin-bottom: {{margin.bottom.value}}{{margin.bottom.type}};
+            margin-left: {{margin.left.value}}{{margin.left.type}};
+        }
+
+        #widget-template-title {
+            text-transform: capitalize;
+            text-align: center;
+        }
+        .demo-widget.row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .demo-widget.column{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
+<section class="demo-widget {{#if layout '===' 'row' }} row {{else}} column {{/if}}" id='demo-widget-{{_.id}}'>
+    <h1 id='widget-template-title'>Demo</h1>
+    <p id='content'>{{content}}</p>
+    <img src="{{image.src}}" alt="{{alt}}" />
+    {{#if font_weight '===' '500'}}
+        <p>Bold</p>
+    {{else}}
+        <p>Italic</p>
+    {{/if}}
+
+</section>
+

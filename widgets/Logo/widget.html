@@ -1,0 +1,18 @@
+<style>
+    {{{html}}}
+</style>
+<div class='product-logos' id='product-logos-{{_.id}}' >
+    <ul class='logos-list'>
+        {{#each logos}}
+        <li class='logo-list-item'>
+            <div class="logo-div">
+                <img src='{{logo.src}}' alt='{{altText}}'/>
+            </div>
+            <div>
+                {{{html}}}
+            </div>
+        </li>
+        {{/each}}
+
+    </ul>
+</div>

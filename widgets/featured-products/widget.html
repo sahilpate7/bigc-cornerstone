@@ -1,0 +1,19 @@
+<section class='product-slider' id='product-slider-{{_.id}}'>
+    <h2 class='title'>{{title}}</h2>
+    <ul class='products-list'
+        data-slick='{ "infinite": false, "mobileFirst": true, "slidesToShow": 1, "slidesToScroll": 1, "slide": ".slider-item", "dots": false, "arrows" : true, "responsive": [ { "breakpoint": 550, "settings": { "slidesToShow": 2, "slidesToScroll": 1 } } ] }'>
+        {{#each _.data.site.products.edges}}
+        <li class='slider-item'>
+            <div class='image-box'>
+                <a href='{{node.path}}' class='image-link'>
+                    <img alt='{{node.defaultImage.altText}}' src='{{node.defaultImage.urlOriginal}}'/>
+                </a>
+            </div>
+            <div class='content-box'>
+                <span>{{node.brand.name}}</span>
+                <h3 class='name'><a href='{{node.path}}'>{{node.name}}</a></h3>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</section>

@@ -1,0 +1,21 @@
+query paginateProducts($productsList: [Int!]) {
+    site {
+        products(entityIds: $productsList) {
+            edges {
+                node {
+                    entityId
+                    name
+                    defaultImage {
+                        urlOriginal
+                        altText
+                    }
+                    path
+                    brand {
+                        name
+                        path
+                    }
+                }
+            }
+        }
+    }
+}

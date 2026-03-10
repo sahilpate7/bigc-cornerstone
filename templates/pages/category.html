@@ -51,6 +51,41 @@ category:
     <div class="page-region">
         {{{region name="category_below_content"}}}
     </div>
+
+    <nav>
+        {{#each breadcrumbs}}
+            {{#if @last}}
+                <span>{{name}}</span>
+        {{else}}
+                <a href="{{url}}">{{name}}</a>
+                <span class="breadcrumb-seperator">/</span>
+            {{/if}}
+        {{/each}}
+    </nav>
+
+    <h2>Categories</h2>
+    <ul>
+        {{#each categories}}
+        <li>
+            <a href="{{url}}">{{name}}</a>
+            <span>({{count}}) products</span>
+            {{#if children}}
+            <ul>
+                {{#each children}}
+                <li>
+                    <a href="{{url}}">{{name}}</a>
+                    <span>({{count}}) products</span>
+                    <p>{{../name}}</p>
+                </li>
+                {{/each}}
+            </ul>
+            {{/if}}
+
+        </li>
+
+        {{/each}}
+    </ul>
+
 </div>
 
 {{/partial}}

@@ -1,0 +1,55 @@
+{
+  "content": "I am a sample text",
+  "color": "#FFFFFF",
+  "background_color": "#3C1F8C",
+  "font_size": {
+    "value": 24,
+    "type": "px"
+  },
+  "font_weight": "100",
+  "text_align": {
+    "horizontal": "center",
+    "vertical": "middle"
+  },
+  "margin": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": "px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  },
+  "padding": {
+    "top": {
+      "value": "8",
+      "type": "px"
+    },
+    "right": {
+      "value": "24",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "8",
+      "type": "px"
+    },
+    "left": {
+      "value": "24",
+      "type": "px"
+    }
+  },
+  "image": {
+    "src": "https://storage.googleapis.com/bigcommerce-production-dev-center/images/upload_image.png",
+    "type": "IMAGE_MANAGER"
+  },
+  "alt": "Sample Image "
+}
