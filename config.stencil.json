@@ -1,0 +1,13 @@
+{
+  "customLayouts": {
+    "brand": {},
+    "category": {},
+    "page": {},
+    "product": {
+      "premium-product.html" : "/iphone-17/"
+    }
+  },
+  "normalStoreUrl": "https://traning-sandbox-1.mybigcommerce.com",
+  "port": 3000,
+  "packageManager": "npm"
+}
